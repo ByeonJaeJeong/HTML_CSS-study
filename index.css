@@ -1,0 +1,60 @@
+/*UA Reset*/
+body, h1, p{
+    margin: 0;
+}
+/* Typography */
+:root{
+    font-size :62.5%; /* 10px */
+}
+body{
+    font-size: 1.4rem;
+}
+h1{
+    /* inherit 부모의 요소를 가져옴 (유지보수 용이) */
+    font-size : inherit;
+    font-weight: inherit;
+}
+/* Colors root(ex 11 이상 ) 변수 처럼 사용가능*/
+:root{
+    --background-color: midnightblue;
+    --normal-color: dodgerblue;
+    --primary-color: lightgreen;
+    --secondary-color: salmon;
+}
+/* Layouts */
+.wrapper{
+    width : 960px;
+    margin : 0 auto;
+}
+.header{
+    display: flex;
+    padding: 2rem 0 ; /* 도중 모바일 폰트 수정 여부에 따라 따라감 */
+    align-items: center;
+}
+.header-title{
+    color: var(--secondary-color);
+    font-size:  8rem;
+    font-family: 'Londrina Solid', cursive;
+}
+.header-title strong{
+    color: var(--primary-color);
+    font-size:  8rem;
+    font-family: 'Londrina Solid', cursive;
+}
+.header-meta{
+    font-size : 2rem;
+    display: flex;
+    align-items: center;
+}
+.header-meta::before{
+    content: '';
+    width: 2em;
+    height: 2px;
+    margin: 0 2em;
+    background-color: currentColor; /* 부모의 색*/
+}
+/* Componets*/
+body {
+    background-color: var(--background-color);
+    color: var(--normal-color);
+}
